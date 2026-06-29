@@ -1,0 +1,35 @@
+{
+	"schemaVersion": 1,
+	"id": "symbiote",
+	"version": "${version}",
+	"name": "Symbiote",
+	"description": "Your max health matches the nearest mob's max health.",
+	"authors": [
+		"Seraphine Xaihi",
+		"@akgamerz790",
+		"@FrontierProjects",
+		"Endfield Industries",
+		"Wuling RD"
+	],
+	"contact": {
+		"homepage": "https://github.com/akgamerz790/",
+		"sources": "https://github.com/akgamerz790/Symbiote"
+	},
+	"license": "TGCC STANDARD ISSUE LICENSE",
+	"icon": "assets/symbiote/appicon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.xaihi.symbiote.Symbiote"
+		]
+	},
+	"mixins": [
+		"symbiote.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
