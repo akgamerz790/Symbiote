@@ -1,0 +1,25 @@
+name: Originium Build
+on: [pull_request, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Initialize AIC
+        uses: actions/checkout@v6
+      - name: Validate Gradle Protcol
+        uses: gradle/actions/wrapper-validation@v6
+      - name: Setup AIC Runtime
+        uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'microsoft'
+      - name: Granting Deployment Rights
+        run: chmod +x ./gradlew
+      - name: Crystallize
+        run: ./gradlew build
+      - name: Recover Combat Data
+        uses: actions/upload-artifact@v7
+        with:
+          name: Originium Artifacts
+          path: build/libs/
