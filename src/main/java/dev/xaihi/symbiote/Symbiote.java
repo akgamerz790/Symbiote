@@ -14,6 +14,8 @@ public class Symbiote implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("[!] Symbiote Mod Initializing...");
+		CommandRegistry.register();
+        TickHandler.register();
 	}
 
 	public static Identifier id(String path) {
